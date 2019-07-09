@@ -1,0 +1,39 @@
+package Test;
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class RandomGame {
+
+	public static void main(String[] args) {
+		int rnd= new Random().nextInt(50);
+			System.out.println(rnd);	
+			Scanner in = new Scanner(System.in);
+	        
+	        int Guess = in.nextInt();
+	   
+	        while(Guess!=rnd) {
+	            if(Guess == rnd)
+		        	System.out.println("Correct");
+		        else
+		        {
+		        	
+		        	if(Guess>rnd)
+		        	{
+		        		System.out.println("Enter Lower Number");
+		        		Guess = in.nextInt();
+		        	}
+		        	
+		        	else
+		        	{
+		        		System.out.println("Enter Bigger Number");
+		        		Guess = in.nextInt();
+		        	}
+		        }
+	        	
+	        }
+	        
+	        System.out.println("Correct");
+	}
+
+}
